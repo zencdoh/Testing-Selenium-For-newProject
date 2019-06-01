@@ -18,7 +18,7 @@ public class SmokeTest {
 		//System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self'; style-src 'self' 'unsafe-inline'; font-src *");
 		System.setProperty("webdriver.chrome.driver", "/home/ubuntu/chromedriver");
 		WebDriver driver = new ChromeDriver();
-		webDriver.manage().window().setSize(new Dimension(1600,900));
+		webDriver.manage().window().maximize();
 		driver.get("http://www.facebook.com");
 }
 	    
