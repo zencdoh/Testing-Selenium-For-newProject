@@ -16,10 +16,16 @@ public class SmokeTest {
 	@Given("Open chrome and start application")
 	public void open_firefox_and_start_application() {
 		//System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self'; style-src 'self' 'unsafe-inline'; font-src *");
-		System.setProperty("webdriver.chrome.driver", "/home/ubuntu/chromedriver");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("http://www.facebook.com");
+		//System.setProperty("webdriver.chrome.driver", "/home/ubuntu/chromedriver");
+		//driver = new ChromeDriver();
+		//driver.manage().window().maximize();
+		//driver.get("http://www.facebook.com");
+
+	ChromeOptions options = new ChromeOptions();
+	options.addArguments("--headless");
+	options.addArguments("start-maximized");
+	WebDriver driver = new ChromeDriver(options);
+	driver.navigate().to("https://google.com");
 }
 	    
 	@When("I enter valid {string} and valid {string}")
