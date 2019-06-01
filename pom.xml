@@ -82,6 +82,10 @@
     <artifactId>cucumber-testng</artifactId>
     <version>4.2.0</version>
 </dependency>
+
+</dependencies>
+<build>
+<plugins>
 <dependency>
           <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-compiler-plugin</artifactId>
@@ -105,10 +109,6 @@
         </configuration>
     </plugin>
 </dependency>
-</dependencies>
-<build>
-<plugins>
-
 <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
 
     <groupId>org.apache.maven.plugins</groupId>
