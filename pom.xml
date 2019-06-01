@@ -82,20 +82,7 @@
     <artifactId>cucumber-testng</artifactId>
     <version>4.2.0</version>
 </dependency>
-</dependencies>
-<build>
-<plugins>
-
-<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>${maven-surefire-plugin.version}</version>
-        <configuration>
-            <!-- Force alphabetical order to have a reproducible build -->
-            <runOrder>alphabetical</runOrder>
-            <useSystemClassLoader>false</useSystemClassLoader>
-        </configuration>
-    </plugin>
+<dependency>
 
 <plugin>
 
@@ -107,6 +94,24 @@
 <target>1.8</target>
 </configuration>
 </plugin>
+</dependency>
+
+<dependency>
+
+<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven-surefire-plugin.version}</version>
+        <configuration>
+            <!-- Force alphabetical order to have a reproducible build -->
+            <runOrder>alphabetical</runOrder>
+            <useSystemClassLoader>false</useSystemClassLoader>
+        </configuration>
+    </plugin>
+</dependency>
+</dependencies>
+<build>
+<plugins>
 
 <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
 
